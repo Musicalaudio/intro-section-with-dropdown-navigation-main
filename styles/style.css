@@ -47,13 +47,17 @@ h1 {
   letter-spacing: -0.5px;
 }
 
-.nav {
+header {
   display: flex;
   padding-block: clamp(1rem, calc(0.82rem + 0.75vw), 1.5rem);
-  padding: clamp(1rem, calc(0.47rem + 2.25vw), 2.5rem);
-  font-size: var(--fs-s);
+  padding-inline: clamp(1rem, calc(0.47rem + 2.25vw), 2.5rem);
   max-width: 85rem;
   margin-inline: auto;
+}
+
+.nav {
+  display: flex;
+  font-size: var(--fs-s);
 }
 
 .nav :where(li, a) {
@@ -100,7 +104,7 @@ h1 {
   top: calc(100% + 1.25rem);
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.2s, visibility 0.2s;
+  transition: opacity 0.3s linear;
 }
 
 .nav__dropdown::hover .nav__dropdown-menu {
@@ -122,7 +126,38 @@ h1 {
 }
 
 .nav__acc .button {
-  margin-left: 2.5rem;
+  margin-left: clamp(0rem, calc(-0.2rem + 3vw), 2.5rem);
+}
+
+@media (max-width: 53rem) {
+  body {
+    /* background-color: red; */
+  }
+
+  /* .nav__acc {
+    display: none;
+  } */
+
+  header {
+    margin-inline: 0 auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 36%;
+    background-color: var(--pure-white, #fff);
+    margin-inline: 0;
+    padding-inline: 1.5rem;
+  }
+
+  /* .nav__acc {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    text-align: center;
+    gap: 1rem;
+  } */
 }
 
 @media (max-width: 13.9375rem) {
