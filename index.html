@@ -34,25 +34,25 @@
                 <img
                   src="./images/icon-todo.svg"
                   alt=""
-                  aria-hidden="true" />Todo List
+                  aria-hidden="true" /><span>Todo List</span>
               </li>
               <li class="nav__dropdown-item">
                 <img
                   src="./images/icon-calendar.svg"
                   alt=""
-                  aria-hidden="true" />Calender
+                  aria-hidden="true" /><span>Calender</span>
               </li>
               <li class="nav__dropdown-item">
                 <img
                   src="./images/icon-reminders.svg"
                   alt=""
-                  aria-hidden="true" />Reminders
+                  aria-hidden="true" /><span>Reminders</span>
               </li>
               <li class="nav__dropdown-item">
                 <img
                   src="./images/icon-planning.svg"
                   alt=""
-                  aria-hidden="true" />Planning
+                  aria-hidden="true" /><span>Planning</span>
               </li>
             </ul>
           </li>
@@ -73,36 +73,40 @@
         </div>
       </nav>
     </header>
-    <main class="flow">
-      <picture>
-        <!-- <src srcset="./" -->
+    <main class="flow wrapper">
+      <picture class="hero__img-wrapper">
+        <source
+          srcset="./images/image-hero-desktop.png"
+          alt=""
+          media="(min-width: 53rem)" />
         <img class="hero__img" src="./images/image-hero-mobile.png" alt="" />
       </picture>
-      <section class="hero wrapper flow">
-        <h1>Make remote work</h1>
-        <p class="hero__desc">
-          Get your team in sync, no matter your location. Streamline processes,
-          create team rituals, and watch productivity soar.
-        </p>
+      <section class="hero flow">
+        <div class="flow">
+          <h1>Make remote work</h1>
+          <p class="hero__desc">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a class="button learn-more" href="#">Learn more</a>
+        </div>
+        <ul class="related-companies wrapper" role="list">
+          <li>
+            <a href="#"><img src="./images/client-databiz.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/client-audiophile.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/client-meet.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/client-maker.svg" alt="" /></a>
+          </li>
+        </ul>
       </section>
-
-      <a class="button learn-more" href="#">Learn more</a>
-      <ul class="related-companies" role="list">
-        <li>
-          <a href="#"><img src="./images/client-databiz.svg" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="./images/client-audiophile.svg" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="./images/client-meet.svg" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="./images/client-maker.svg" alt="" /></a>
-        </li>
-      </ul>
     </main>
-    <footer class="attribution">
+    <footer class="attribution" style="margin-inline: auto">
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
