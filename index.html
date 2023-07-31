@@ -19,59 +19,79 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="wrapper">
       <a href="#">
         <img class="nav__logo" src="./images/logo.svg" alt="snap logo" />
       </a>
-      <nav class="nav">
-        <ul class="nav__options active" role="list">
-          <li>
-            <a href="#0" class="nav__dropdown">Features</a>
-            <ul class="nav__dropdown-menu">
+      <nav class="nav" data-visible="false">
+        <ul class="nav__options" role="list">
+          <li class="nav__dropdown">
+            <button
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="Features"
+              data-dropdown="dropdown1">
+              Features
+            </button>
+            <ul class="nav__dropdown-menu" id="dropdown1">
               <li class="nav__dropdown-item">
-                <img
-                  src="./images/icon-todo.svg"
-                  alt=""
-                  aria-hidden="true" /><span>Todo List</span>
+                <img src="./images/icon-todo.svg" alt="" aria-hidden="true" />
+                <a href="#">Todo List</a>
               </li>
               <li class="nav__dropdown-item">
                 <img
                   src="./images/icon-calendar.svg"
                   alt=""
-                  aria-hidden="true" /><span>Calender</span>
+                  aria-hidden="true" /><a href="#">Calender</a>
               </li>
               <li class="nav__dropdown-item">
                 <img
                   src="./images/icon-reminders.svg"
                   alt=""
-                  aria-hidden="true" /><span>Reminders</span>
+                  aria-hidden="true" /><a href="#">Reminders</a>
               </li>
               <li class="nav__dropdown-item">
                 <img
                   src="./images/icon-planning.svg"
                   alt=""
-                  aria-hidden="true" /><span>Planning</span>
+                  aria-hidden="true" /><a href="#">Planning</a>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#0" class="nav__dropdown">Company</a>
-            <ul class="nav__dropdown-menu">
-              <li><img src="" alt="" aria-hidden="true" />History</li>
-              <li><img src="" alt="" aria-hidden="true" />Our Team</li>
-              <li><img src="" alt="" aria-hidden="true" />Blog</li>
+          <li class="nav__dropdown">
+            <button
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="Company"
+              data-dropdown="dropdown2">
+              Company
+            </button>
+            <ul class="nav__dropdown-menu" id="dropdown2">
+              <li>
+                <a href="#0">History</a>
+              </li>
+              <li>
+                <a href="#0">Our Team</a>
+              </li>
+              <li>
+                <a href="#0">Blog</a>
+              </li>
             </ul>
           </li>
-          <li>Careers</li>
-          <li>About</li>
+          <li><a href="#0">Careers</a></li>
+          <li><a href="#0">About</a></li>
         </ul>
         <div class="nav__acc">
           <a href="#">Login</a>
           <a href="#" class="button">Register</a>
         </div>
       </nav>
+      <button class="nav__menu-button" aria-controls="nav__options">
+        <span class="sr-only">Menu</span>
+      </button>
     </header>
     <main class="flow wrapper">
       <picture class="hero__img-wrapper">
@@ -82,15 +102,15 @@
         <img class="hero__img" src="./images/image-hero-mobile.png" alt="" />
       </picture>
       <section class="hero flow">
-        <div class="flow">
+        <div>
           <h1>Make remote work</h1>
           <p class="hero__desc">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <a class="button learn-more" href="#">Learn more</a>
         </div>
-        <ul class="related-companies wrapper" role="list">
+        <a class="button learn-more" href="#">Learn more</a>
+        <ul class="related-companies" role="list">
           <li>
             <a href="#"><img src="./images/client-databiz.svg" alt="" /></a>
           </li>
@@ -106,7 +126,7 @@
         </ul>
       </section>
     </main>
-    <footer class="attribution" style="margin-inline: auto">
+    <footer class="attribution" style="text-align: center">
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
